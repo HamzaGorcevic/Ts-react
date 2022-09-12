@@ -22,7 +22,7 @@ const ToDoApp:React.FC = ()=>{
             <Button onClick={()=>{setTrack([...track,{value,num}])}}>Add</Button>
         </Form>
         {track.map((value:Props,num:number)=>{
-            return  <ToDoTask key={num} task={value}  taskToDelete={taskToDelete}/>
+            return  <ToDoTask key={num}  task={value}  taskToDelete={taskToDelete}/>
             
             
         })}
