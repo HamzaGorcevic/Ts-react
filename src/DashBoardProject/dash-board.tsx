@@ -10,7 +10,7 @@ const DashApp: React.FC = () => {
   useEffect(() => {
     axios
       .get(
-        "http://www.randomnumberapi.com/api/v1.0/random?min=10&max=100&count=5"
+        "http://www.randomnumberapi.com/api/v1.0/random?min=10&max=100&count=10"
       )
       .then((response) => {
         setData(response.data);
@@ -22,12 +22,7 @@ const DashApp: React.FC = () => {
       <Global>
         <ContainerStatistic>
           {data.map((el) => {
-            return (
-              <DashSingleStyle el={el}>
-                {el}
-                <p>Hello World</p>
-              </DashSingleStyle>
-            );
+            return <DashSingleStyle el={el}>{el}</DashSingleStyle>;
           })}
         </ContainerStatistic>
       </Global>
